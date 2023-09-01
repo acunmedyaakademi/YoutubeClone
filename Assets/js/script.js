@@ -6,3 +6,9 @@ menuIcon.onclick =function(){
     sidebar.classList.toggle("small-sidebar")
     content.classList.toggle("large-content")
 }
+
+
+
+
+
+
