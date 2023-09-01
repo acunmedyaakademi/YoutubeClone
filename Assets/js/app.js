@@ -1,6 +1,7 @@
 const urlPrefix = 'http://localhost:1337/api/';
 const requestPostsUrl = urlPrefix + 'posts';
 const btn = document.querySelector('.olderPost');
+const content = document.querySelector('.content');
 let posts = [];
     
 
@@ -29,18 +30,12 @@ function render() {
         const currPost = posts[i];
         const firstSentence = getFirstSentence(currPost.content);
         colmd10.innerHTML += `
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">${currPost.title}</h2>
-                    <h3 class="post-subtitle">${firstSentence}</h3>
-                </a>
-                <p class="post-meta">
-                    " Posted by "
-                    <a href="#!">Start Bootstrap</a>
-                    " on ${currPost.publishedAt}"
-                </p>
-            </div>
-            <hr>
+        <div class="deneme">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fQBqaga9ElU?si=8iL7F_F_TBN7gbeq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>${firstSentence}</iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yJVwNyVUOvc?si=htf5YzBvpZgLMVTq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TES4wyplp_I?si=7whbIx7H0IyG8VH_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
         `;
     }
     bindPostsClicks();

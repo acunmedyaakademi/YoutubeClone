@@ -157,6 +157,34 @@ nav{
     margin-top: 15px;
  
 }
+.tableOnee {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 75px;
+ }
 
+ .tableOnee tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+ }
+ 
+  .tableOnee iframe {
+    border-radius: 10px;
+    height: 190px;
+    width: 300px;
+    
+  }
+   .tableOnee  tr td .headerOne{
+    margin: 10px;
+    color: black;
+  }
+
+  .tableOnee  tr td .paragone {
+
+    display: inline;
+    margin: 10px 35px;
+    color: #5a5a5a;
+  }
 
 
