@@ -1,7 +1,7 @@
 const urlPrefix = 'http://localhost:1337/api/';
 const requestPostsUrl = urlPrefix + 'posts';
 const btn = document.querySelector('.olderPost');
-const content = document.querySelector('.content');
+const content = document.querySelector('.content-video');
 let posts = [];
     
 
