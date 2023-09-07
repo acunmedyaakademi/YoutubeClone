@@ -1,10 +1,49 @@
 const apiUrl = 'http://localhost:1337/api';
-const videoUrl = apiUrl + 'posts/';
+const videoUrl = apiUrl + 'posts';
+let posts = [];
 
 
 const contentEl = document.querySelector('.content');
 const table = document.querySelector('.tableOnee');
 
+
+
+
+function renderPosts() {
+    for (const post of posts) {
+        console.log(post.id);
+
+    }
+
+}
+
+function getFirstSentence(content) {
+    const sentences = content.split('.');
+    if (sentences.length > 0) {
+        return sentences[0] + '.';
+    }
+    return content;
+}
+
+
+
+const colmd10 = document.querySelector('.content .tableOnee .one');
+
+
+function render() {
+    for (let i = 0; i < 5; i++) {
+        const currPost = posts[i];
+        const firstSentence = getFirstSentence(currPost.content);
+        colmd10.innerHTML += `
+            <div class="content">
+            <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/t5vrUExGYtw?si=BPRpb7sisSyvBF2q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>${posts.id}</iframe>
+            <h3 class="headerOne">${posts.attributes.title}</h3>
+            <p class="paragone">${posts.attributes.summary}</p>
+            </div>
+        `;
+    }
+    bindPostsClicks();
+}
 
 
 async function handlePage() {
