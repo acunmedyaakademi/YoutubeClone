@@ -43,8 +43,18 @@ function render() {
         `;
     }
     bindPostsClicks();
+   
 }
 
+
+function numberOnClick() {
+    let numberOnClick = 0;
+    for (let i = 0; i < 10; i++) {  
+    }
+    console.log(numberOnClick);
+}
+
+numberOnClick();
 
 async function handlePage() {
     let url = location.hash.substring(1);
