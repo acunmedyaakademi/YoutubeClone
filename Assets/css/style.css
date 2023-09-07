@@ -171,7 +171,9 @@ nav{
 .banner{
     width: 100%;
 }
-.banner img{
+.banner iframe{
+    display: flex;
+    justify-content: center;
     height: 350px;
     object-fit: cover;
     width: 100%;
@@ -189,7 +191,8 @@ nav{
 .tableOnee {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 75px;
+    margin-left: 55px;
+    margin-top: 20px;
  }
 
  .tableOnee tr {
@@ -201,7 +204,7 @@ nav{
   .tableOnee iframe {
     border-radius: 10px;
     height: 190px;
-    width: 300px;
+    width: 350px;
     
   }
    .tableOnee  tr td .headerOne{
@@ -216,4 +219,20 @@ nav{
     color: #5a5a5a;
   }
 
+  @media (max-width:768px) {
+    .menu_icon{
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .banner img{
+        display: none;
+    }
+    .tableOnee tr td iframe{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 
