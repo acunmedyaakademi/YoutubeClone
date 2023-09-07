@@ -220,7 +220,7 @@ nav{
   }
 
   @media (max-width:768px) {
-    .menu_icon{
+  .menu_icon{
         display: none;
     }
 
