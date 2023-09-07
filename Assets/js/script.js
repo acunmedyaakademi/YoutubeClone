@@ -1,6 +1,6 @@
-const menuIcon = document.querySelector(".menu_icon")
-const sidebar = document.querySelector(".sidebar")
-const content = document.querySelector(".content")
+const menuIcon = document.querySelector('.menu_icon');
+const sidebar = document.querySelector('.sidebar');
+
 
 menuIcon.onclick =function(){
     sidebar.classList.toggle("small-sidebar")
