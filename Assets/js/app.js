@@ -58,7 +58,7 @@ numberOnClick();
 
 async function handlePage() {
     let url = location.hash.substring(1);
-    if(url.length < 1) {
+    if(url.length < 5) {
         url = '/';
     }
 
