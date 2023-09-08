@@ -4,7 +4,7 @@ const commentForm = document.querySelector('.comment form');
 
 async function loadData() {
     postsContainer.innerHTML = '';
-    let post = await fetch('http://localhost:1337/api/posts/1').then(x => x.json());
+    let post = await fetch('http://localhost:1337/api/posts/5').then(x => x.json());
     let comments = await fetch('http://localhost:1337/api/comments?filters[post][id][$eq]=' + post.data.id).then(x => x.json());
     postsContainer.innerHTML += `<h1>${post.data.attributes.title}</h1>`;
     postsContainer.innerHTML += `<p>${post.data.attributes.content}</p>`;

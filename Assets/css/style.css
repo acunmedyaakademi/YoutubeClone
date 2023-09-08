@@ -241,16 +241,16 @@ nav{
 
 
 .content-video{
-    background: #f9f9f9;
-    padding-left:17%;
+    margin-top: 30px;
+    padding-left:10%;
     padding-right: 2%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     transition:all 0.3s ease;
 }
 .masAy {
-    width: 1050px;
-    height: 550px;
+    width: 750px;
+    height: 350px;
 }
 
 
@@ -258,7 +258,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 15px;
-    margin-top: 30px;
+    margin-top: 250px;
 }
 .comment form{
     display: flex;
