@@ -1,4 +1,4 @@
-const postsContainer = document.querySelector('#postsContainer');
+const contentVideo = document.querySelector('.content-video');
 const baseUrl = 'http://localhost:1337/api/';
 const commentForm = document.querySelector('.comment form');
 
@@ -38,7 +38,7 @@ async function getPosts() {
     if (postsData.data && postsData.data.length > 0) {
         postsData.data.forEach(post => {
             const postElement = document.createElement('div');
-            postElement.classList.add('post-preview');
+            postElement.classList.add('content');
             postElement.innerHTML = `
                 <a href="javascript:void(0);" class="post-link" data-postid="${post.id}">
                     <h2 class="post-title">${post.attributes.title}</h2>
