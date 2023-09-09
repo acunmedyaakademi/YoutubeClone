@@ -27,14 +27,14 @@ function getFirstSentence(content) {
 
 
 
-const colmd10 = document.querySelector('.content .tableOnee .one');
+const content = document.querySelector('.content .tableOnee .one');
 
 
 function render() {
     for (let i = 0; i < 5; i++) {
         const currPost = posts[i];
         const firstSentence = getFirstSentence(currPost.content);
-        colmd10.innerHTML += `
+        content.innerHTML += `
             <div class="content">
             <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/t5vrUExGYtw?si=BPRpb7sisSyvBF2q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>${posts.id}</iframe>
             <h3 class="headerOne">${posts.attributes.title}</h3>
@@ -45,16 +45,6 @@ function render() {
     bindPostsClicks();
    
 }
-
-
-function numberOnClick() {
-    let numberOnClick = 0;
-    for (let i = 0; i < 10; i++) {  
-    }
-    console.log(numberOnClick);
-}
-
-numberOnClick();
 
 async function handlePage() {
     let url = location.hash.substring(1);

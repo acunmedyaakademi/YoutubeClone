@@ -17,13 +17,13 @@ async function loadData() {
 }
 
 async function showPostDetail(postId) {
-    postsContainer.innerHTML = '';
+    contentVideo.innerHTML = '';
 
     let post = await fetch(`http://localhost:1337/api/posts/${postId}`).then(x => x.json());
-    postsContainer.innerHTML += `<h1>${post.data.attributes.title}</h1>`;
-    postsContainer.innerHTML += `<p>${post.data.attributes.content}</p>`;
-    postsContainer.innerHTML += `<hr>`;
-    postsContainer.innerHTML += `<h2>Yorumlar:</h2>`;
+    contentVideo.innerHTML += `<h1>${post.data.attributes.title}</h1>`;
+    contentVideo.innerHTML += `<p>${post.data.attributes.content}</p>`;
+    contentVideo.innerHTML += `<hr>`;
+    contentVideo.innerHTML += `<h2>Yorumlar:</h2>`;
 
     commentForm.style.display = 'block';
 
@@ -51,10 +51,10 @@ async function getPosts() {
 
             });
 
-            postsContainer.appendChild(postElement);
+            contentVideo.appendChild(postElement);
         });
     } else {
-        postsContainer.innerHTML = 'Henüz gönderi yok.';
+        contentVideo.innerHTML = 'Henüz gönderi yok.';
     }
 }
 
@@ -73,7 +73,7 @@ async function getComments(postId) {
                 commentDiv.innerHTML = `
                     <p><strong>${comment.attributes.name}</strong> ${new Date(comment.attributes.createdAt).toLocaleString('tr')} demiş ki: <br>${comment.attributes.comment}</p>
                 `;
-                postsContainer.appendChild(commentDiv);
+                contentVideo.appendChild(commentDiv);
             }
         } else {
             postsContainer.innerHTML += '<p>Henüz yorum yok.</p>';
