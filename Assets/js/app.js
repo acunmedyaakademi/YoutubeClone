@@ -80,10 +80,10 @@ async function getPosts() {
 
             });
 
-            postsContainer.appendChild(postElement);
+            contentVideo.appendChild(postElement);
         });
     } else {
-        postsContainer.innerHTML = 'Henüz gönderi yok.';
+        contentVideo.innerHTML = 'Henüz gönderi yok.';
     }
 }
 

@@ -3,16 +3,16 @@ const baseUrl = 'http://localhost:1337/api/';
 const commentForm = document.querySelector('.comment form');
 
 async function loadData() {
-    postsContainer.innerHTML = '';
+    contentVideo.innerHTML = '';
     let post = await fetch('http://localhost:1337/api/posts/5').then(x => x.json());
     let comments = await fetch('http://localhost:1337/api/comments?filters[post][id][$eq]=' + post.data.id).then(x => x.json());
-    postsContainer.innerHTML += `<h1>${post.data.attributes.title}</h1>`;
-    postsContainer.innerHTML += `<p>${post.data.attributes.content}</p>`;
-    postsContainer.innerHTML += `<hr>`;
-    postsContainer.innerHTML += `<h2>Yorumlar:</h2>`;
+    contentVideo.innerHTML += `<h1>${post.data.attributes.title}</h1>`;
+    contentVideo.innerHTML += `<p>${post.data.attributes.content}</p>`;
+    contentVideo.innerHTML += `<hr>`;
+    contentVideo.innerHTML += `<h2>Yorumlar:</h2>`;
 
     for (const comment of comments.data) {
-        postsContainer.innerHTML += `<p>${comment.attributes.name} ${new Date(comment.attributes.createdAt).toLocaleString('tr')} demiş ki: <br>${comment.attributes.comment}  </p>`;
+        contentVideo.innerHTML += `<p>${comment.attributes.name} ${new Date(comment.attributes.createdAt).toLocaleString('tr')} demiş ki: <br>${comment.attributes.comment}  </p>`;
     }
 }
 
@@ -76,7 +76,7 @@ async function getComments(postId) {
                 contentVideo.appendChild(commentDiv);
             }
         } else {
-            postsContainer.innerHTML += '<p>Henüz yorum yok.</p>';
+            contentVideo.innerHTML += '<p>Henüz yorum yok.</p>';
         }
     } catch (error) {
         console.error('Yorumlar alınamadı', error);
