@@ -6,22 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="Assets/js/script.js" defer></script>
+    <script src="Assets/js/app.js" defer></script>
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="icon" type="png" href="Assets/img/Ana LOGO.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="flex-div">
         <div class="nav-left flex-div">
             <img src="assets/img/svg/menu.svg" alt="" class="menu_icon">
             <a href="index.html"> <img src="assets/img/youtube.png" alt="" class="logo">
             </a>
-
         </div>
+
         <div class="nav-middle flex-div">
             <div class="search_box flex-div">
                 <input type="text" id="search_input" placeholder="Ara">
@@ -29,14 +29,31 @@
             </div>
             <img src="Assets/img/voice-search.png" class="mic_icon" alt="">
         </div>
+
         <div class="nav-right flex-div">
             <img src="Assets/img/upload.png" alt="">
             <img src="Assets/img/more.png" alt="">
             <img src="Assets/img/svg/notifications-active.svg" alt="">
-            <img src="Assets/img/Jack.png" alt="" class="user-icon">
+            <button id="modal-ac">Oturum Aç </button>
+
+            <div class="modal">
+                <form>
+                    <h3 id="modal-kapat">X</h3>
+                    <label>Kullanıcı Adı</label>
+                    <input type="text" placeholder="Adınız">
+
+                    <label>E Posta</label>
+                    <input type="email" placeholder="ornek@gmail.com">
+
+                    <label>Şifreniz</label>
+                    <input type="password" placeholder="*******">
+
+                    <button id="formButton">Oturum Aç</button>
+                </form>
+            </div> 
         </div>
     </nav>
-    <!-- --------------------------sidebar--------------------- -->
+    <!-- Sidebar Kısmı -->
     <div class="sidebar">
         <div class="shortcut-links">
             <a href="#"><img src="Assets/img/svg/Home.svg" alt="">
@@ -63,8 +80,25 @@
             <a href="#"><img src="assets/img/svg/ShowMore.svg" alt="">
                 <p>Daha Fazla Göster</p>
             </a>
-            <hr>
         </div>
+
+        <!-- Filters Kısmı -->
+        <div class="filters">
+            <button class="filter-options active">Tümü</button>
+            <button class="filter-options">Müzik</button>
+            <button class="filter-options">Canlı</button>
+            <button class="filter-options">Pembe Diziler</button>
+            <button class="filter-options">Mix'ler</button>
+            <button class="filter-options">Komedi Maç Görüntüleri</button>
+            <button class="filter-options">Oyun</button>
+            <button class="filter-options">Animasyon</button>
+            <button class="filter-options">Güzellik Salonu</button>
+            <button class="filter-options">Materyaller</button>
+            <button class="filter-optionstwo"> <img class="rightAngle" src="Assets/img/svg/RightAngle.svg"
+                    alt=""></button>
+        </div>
+
+        <!-- Abonlikler Kısmı  -->
         <div class="subcribed-list">
             <h3>Abonelikler</h3>
             <a href=""><img src="assets/img/AboneResimleri/Orhan EKİCİ.jpg" alt="">
@@ -81,54 +115,170 @@
             </a>
             <a href=""><img src="Assets/img/AboneResimleri/Ela VELA.jpg" alt="">
                 <p>ELA VELA</p>
+            </a>
         </div>
     </div>
-    <!-- --------------------main---------------- -->
 
+    <!-- Reklam Kısmı -->
     <div class="content">
         <div class="banner">
-            <img src="Assets/img/banner.png" alt="">
         </div>
+
+        <!-- Videoların Kanal Adı ve Video Başlıklarıyla Eklenmesi -->
+        <table class=" tableOnee">
+            <tr>
+                <td class="one">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t5vrUExGYtw?si=BPRpb7sisSyvBF2q"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Maşa İle Koca Ayı Bölüm 10</h3>
+                    <p class="paragone">+Maşa İle Koca Ayı </p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rGGZnh8W7Oo?si=sOsEtjiRdPDRGQEe"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Miniyo Tüm Uzay Şarkıları</h3>
+                    <p class="paragone">+MiniYo</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FEsWmKqh7dU?si=_3iHFbkTWD5sE0RT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ GARGAMEL ŞİRİNLERİ YAKALAR! • ŞİRİNLER • TÜM BÖLÜMLER </h3>
+                    <p class="paragone">+Şirinler • Türkçe</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9_tQ5ZN6mgg?si=2KmdMQDUIXuCfxj8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ SULTANLAR BIRAKTIĞI YERDEN</h3>
+                    <p class="paragone">+BAYBOT</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/N1w5diXrK-k?si=eBNI6ynFzlV7GFrq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Transfer Haberleri 2023 </h3>
+                    <p class="paragone">+Serhat Hergüner</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RjfeX0p3GN4?si=cZeUEQMdduXc7mJt"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ FB & BJK Maç Sonu </h3>
+                    <p class="paragone">+VOLE</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fQBqaga9ElU?si=8iL7F_F_TBN7gbeq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Dilan Polat - Enercii</h3>
+                    <p class="paragone">+Dilan Polat </p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJVwNyVUOvc?si=htf5YzBvpZgLMVTq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~Derya Uluğ - Nefes</h3>
+                    <p class="paragone">+Netd</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TES4wyplp_I?si=7whbIx7H0IyG8VH_"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ İrem Derici - Bihter</h3>
+                    <p class="paragone">+Mahsen Fabrick</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bbQIhGbAzZw?si=oottzhV07mkXqRBK"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Kral Tutankamon 100. Yıl Özel | DMAX Özel İçerik</h3>
+                    <p class="paragone">+DMAX Turkiye</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/u08XcXmdTUs?si=Dx19jzNBxLe1BXh5"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Gizli Uzay Maceraları | 1.Bölüm</h3>
+                    <p class="paragone">+ DMAX Turkiye</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wGYRqBaKYcE?si=cDRbgUB16o7A4OSk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Dünya'nın Tarih Öncesi Okyanuslarına İNANILMAZ Bir Yolculuk | Dünya Tarihi
+                        Belgeseli</h3>
+                    <p class="paragone">+Hodesa | Odesa'nın Dünyası</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D9Y2JeN2s6M?si=U3Rroozt1pAnvhlf"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Beşiktaş 1-0 Dinamo Kiev | UEFA Konferans Ligi Özet</h3>
+                    <p class="paragone">+Beşiktaş JK</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WjF_BcYeKBo?si=mhyw9iAJA2Ysi42z"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Geniş Özet | Galatasaray 1-0 FK Žalgiris Vilnius #UCL</h3>
+                    <p class="paragone">+Galatasaray</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Js5P10HDZx0?si=p-8JKEO6ponv8b12"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ MAÇ ÖZETİ: Twente 0-1 Fenerbahçe | UEFA Konferans Ligi Play-Off Turu</h3>
+                    <p class="paragone">+Fenerbahçe SK</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RfNHBiBca34?si=2bMtZBqJsTYf5Qv3"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Makine Gerektirmeyen Efsane Kahve ✅ Meşhur Dalgona Kahve (TikTok Kahvesi) ☕
+                    </h3>
+                    <p class="paragone">+Nefis Yemek Tarifleri</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/V1J_1bSEU1U?si=mdAgw4oM8c3npxsU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Tadına Bayılacağınız 4 Kolay İçecek | Rafine Şekersiz, Tok Tutan, Pratik
+                        Smoothie Tarifi</h3>
+                    <p class="paragone">+Refika'nın Mutfağı</p>
+                </td>
+                <td>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Lfxr4JhvyM?si=QdR31iqY76QXof1l"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <h3 class="headerOne">~ Fırın Derdi Yok! Garanti Kıvamıyla Pişmeyen Labneli Cheesecake Tarifi -
+                        Tatlı Tarifleri</h3>
+                    <p class="paragone">+Yemek.com</p>
+                </td>
+            </tr>
+        </table>
     </div>
     </div>
-
-
-
-
-
- 
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
 
 </html>
