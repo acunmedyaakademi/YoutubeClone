@@ -159,7 +159,7 @@ nav{
     width: 15%;
     height: 100vh;
     position: fixed;
-    top: 0;
+    top: 50;
     padding-left: 2%;
     padding-top: 80px;
     transition:all 0.3s ease;
@@ -331,80 +331,6 @@ nav{
   }
 
 
-.content-video{
-    margin-top: 20px;
-    padding-left:10%;
-    padding-right: 2%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition:all 0.3s ease;
-}
-.masAy {
-    width: 750px;
-    height: 350px;
-}
-
-.reklam {
-    width: 550px;
-    height: 350px;
-    float: right;
-    padding:0 0 10px 10px;
-}
-
-
-.right {
-    float: right;
-}
-
-
-.tablee td{
-    display: flex;
-    flex-direction: column;
-}
-.comment {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 15px;
-    margin-top: 150px;
-}
-.comment form{
-    display: flex;
-    gap: 25px;
-    border-radius: 8px;
-
-}
-.btn{
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-.aboneOL{
-   
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 18px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-.aboneOL:hover{
-    background-color: white; 
-    color: black;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
 
 
 
